@@ -7,7 +7,7 @@ import { MapPin, Briefcase } from "lucide-react";
 export function Hero() {
   return (
     <motion.section
-      className="bg-background min-h-screen flex items-center overflow-hidden"
+      className="min-h-screen flex items-center overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -30,10 +30,10 @@ export function Hero() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.2, ease: [0.6, 0.01, -0.05, 0.9] }}
           >
-            <p className="text-xl font-medium text-[#64748B] mb-6">
+            <p className="text-xl font-medium text-slate-600 mb-6">
               Operations Specialist | Client Success Concierge | Project Coordinator
             </p>
-            <div className="flex justify-end items-center gap-6 mb-6 text-base text-[#64748B]">
+            <div className="flex justify-end items-center gap-6 mb-6 text-base text-slate-600">
               <div className="flex items-center gap-2">
                 <MapPin size={16} />
                 <span>Based in Malaysia</span>
@@ -43,7 +43,7 @@ export function Hero() {
                 <span>Remote full-time/freelance</span>
               </div>
             </div>
-            <p className="text-lg text-[#64748B] leading-relaxed">
+            <p className="text-lg text-slate-600 leading-relaxed">
               With 8 years of experience in project-driven environments, I provide the operational backbone that allows businesses to scale and leaders to focus. I turn complex coordination into a seamless, reliable experience, managing the structural integrity of your workflow with empathy and precision.
             </p>
           </motion.div>

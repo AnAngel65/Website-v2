@@ -40,7 +40,7 @@ export function Toolkit() {
   };
 
   return (
-    <section className="bg-background py-24 sm:py-32">
+    <section className="py-24 sm:py-32">
       <div className="mx-auto w-full max-w-7xl px-8">
         <motion.div
           className="text-center mb-16"
@@ -49,10 +49,10 @@ export function Toolkit() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl font-bold uppercase tracking-widest text-text-strong">
+          <h2 className="text-3xl font-bold uppercase tracking-widest text-white">
             My Toolkit
           </h2>
-          <p className="mt-4 text-lg text-[#64748B] max-w-3xl mx-auto">
+          <p className="mt-4 text-lg text-slate-300 max-w-3xl mx-auto">
             A selection of the tools and technologies I use to bring projects to life.
           </p>
         </motion.div>
@@ -70,7 +70,7 @@ export function Toolkit() {
               className="text-center"
               variants={itemVariants}
             >
-              <p className="text-lg font-semibold text-text-strong">{prof}</p>
+              <p className="text-lg font-semibold text-blue-200">{prof}</p>
             </motion.div>
           ))}
         </motion.div>

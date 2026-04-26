@@ -7,7 +7,7 @@ import { Footer } from "@/components/dashboard/Footer";
 
 export default function Home() {
   return (
-    <div className="relative min-h-full bg-background">
+    <div className="relative min-h-full">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute right-0 top-0 h-[520px] w-[520px] bg-[radial-gradient(closest-side,theme(colors.blue.50),transparent)] opacity-80"

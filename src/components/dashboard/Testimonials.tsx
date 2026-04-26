@@ -29,7 +29,7 @@ export function Testimonials() {
   const testimonialsCol4 = testimonials.slice(9, 12);
 
   return (
-    <section className="bg-background py-24 sm:py-32">
+    <section className="py-24 sm:py-32">
       <div className="mx-auto w-full max-w-7xl px-8">
         <motion.div
           className="mb-16 text-center"
@@ -38,10 +38,10 @@ export function Testimonials() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl font-bold uppercase tracking-widest text-text-strong">
+          <h2 className="text-3xl font-bold uppercase tracking-widest text-white">
             Wall of Love
           </h2>
-          <p className="mt-4 text-lg text-[#64748B] max-w-3xl mx-auto">
+          <p className="mt-4 text-lg text-slate-300 max-w-3xl mx-auto">
             A collection of experiences and kind words from clients and partners I've had the pleasure to work with.
           </p>
         </motion.div>

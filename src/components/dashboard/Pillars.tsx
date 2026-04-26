@@ -77,7 +77,7 @@ export function Pillars() {
   const [expanded, setExpanded] = React.useState<false | number>(0);
 
   return (
-    <section className="bg-background py-24 sm:py-32">
+    <section className="py-24 sm:py-32">
       <div className="mx-auto w-full max-w-7xl px-8">
         <motion.div
           className="text-center mb-16"
@@ -86,7 +86,7 @@ export function Pillars() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl font-bold uppercase tracking-widest text-text-strong">
+          <h2 className="text-3xl font-bold uppercase tracking-widest text-white">
             Core Competencies
           </h2>
         </motion.div>
@@ -115,7 +115,7 @@ const AccordionItem = ({ i, expanded, setExpanded, data }: any) => {
       className="border-b border-slate-200"
       initial={false}
       animate={{
-        backgroundColor: isOpen ? "rgba(241, 245, 249, 0.5)" : "rgba(255, 255, 255, 0)",
+        backgroundColor: isOpen ? "rgba(255, 255, 255, 0.2)" : "rgba(255, 255, 255, 0)",
       }}
     >
       <motion.header
@@ -123,8 +123,8 @@ const AccordionItem = ({ i, expanded, setExpanded, data }: any) => {
         initial={false}
         onClick={() => setExpanded(isOpen ? false : i)}
       >
-        <h3 className="text-2xl font-semibold text-text-strong">{data.title}</h3>
-        <div className="text-text-strong">
+        <h3 className="text-2xl font-semibold text-white">{data.title}</h3>
+        <div className="text-white">
           {isOpen ? <Minus size={24} /> : <Plus size={24} />}
         </div>
       </motion.header>
@@ -145,8 +145,8 @@ const AccordionItem = ({ i, expanded, setExpanded, data }: any) => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {data.content.map((entry: any, entryIndex: number) => (
                   <div key={entryIndex}>
-                    <h4 className="text-lg font-semibold text-text-strong mb-2">{entry.title}</h4>
-                    <p className="text-base text-[#64748B]">{entry.text}</p>
+                    <h4 className="text-lg font-semibold text-white mb-2">{entry.title}</h4>
+                    <p className="text-base text-blue-200">{entry.text}</p>
                   </div>
                 ))}
               </div>

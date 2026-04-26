@@ -2,14 +2,12 @@
 
 :root {
   /* Engineering Executive (light-only) */
-  --background: #f1f5f9; /* Cool Slate */
   --card: #ffffff;
   --text: #1e293b; /* Deep Navy for all text */
   --accent: #3b82f6; /* Electric Blue */
 }
 
 @theme inline {
-  --color-background: var(--background);
   --color-card: var(--card);
 
   --color-text: var(--text);
@@ -20,7 +18,6 @@
 }
 
 body {
-  background: #f1f5f9;
   color: var(--text);
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
