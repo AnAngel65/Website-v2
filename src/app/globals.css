@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  /* Engineering Executive (light-only) */
+  --background: #f1f5f9; /* Cool Slate */
+  --card: #ffffff;
+  --text: #1e293b; /* Deep Navy for all text */
+  --accent: #3b82f6; /* Electric Blue */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-card: var(--card);
+
+  --color-text: var(--text);
+  --color-text-strong: var(--text);
+  --color-accent: var(--accent);
+
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: #f1f5f9;
+  color: var(--text);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.2);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
