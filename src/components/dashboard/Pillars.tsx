@@ -73,6 +73,25 @@ const PILLARS_DATA = [
   },
 ];
 
+
+type PillarContent = {
+  title: string;
+  text: string;
+};
+
+type Pillar = {
+  pillar: string;
+  title: string;
+  content: PillarContent[];
+};
+
+type AccordionItemProps = {
+  i: number;
+  expanded: false | number;
+  setExpanded: (i: false | number) => void;
+  data: Pillar;
+};
+
 export function Pillars() {
   const [expanded, setExpanded] = React.useState<false | number>(0);
 
@@ -107,7 +126,7 @@ export function Pillars() {
   );
 }
 
-const AccordionItem = ({ i, expanded, setExpanded, data }: any) => {
+const AccordionItem = ({ i, expanded, setExpanded, data }: AccordionItemProps) => {
   const isOpen = i === expanded;
 
   return (
@@ -143,7 +162,7 @@ const AccordionItem = ({ i, expanded, setExpanded, data }: any) => {
           >
             <div className="p-6 pt-0">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {data.content.map((entry: any, entryIndex: number) => (
+                {data.content.map((entry, entryIndex: number) => (
                   <div key={entryIndex}>
                     <h4 className="text-lg font-semibold text-white mb-2">{entry.title}</h4>
                     <p className="text-base text-blue-200">{entry.text}</p>
