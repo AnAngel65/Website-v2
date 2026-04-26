@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 const PROFICIENCIES = [
   "Google Sheets (Advanced/Automation)",
@@ -17,7 +17,7 @@ const PROFICIENCIES = [
 ];
 
 export function Toolkit() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -27,7 +27,7 @@ export function Toolkit() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
