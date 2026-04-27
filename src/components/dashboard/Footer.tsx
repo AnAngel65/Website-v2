@@ -23,10 +23,10 @@ export function Footer() {
             </p>
           </div>
           <div className="flex items-center gap-8">
-            <a href="mailto:angel_anqi_2009@hotmail.com" className="text-base text-blue-200 hover:text-slate-500 transition-colors">
+            <a href="mailto:angel_anqi_2009@hotmail.com" className="text-base text-slate-300 hover:text-slate-500 transition-colors">
               angel_anqi_2009@hotmail.com
             </a>
-            <a href="https://www.linkedin.com/in/an-qi-ng-554654b6/" target="_blank" rel="noopener noreferrer" className="text-base text-blue-200 hover:text-slate-500 transition-colors">
+            <a href="https://www.linkedin.com/in/an-qi-ng-554654b6/" target="_blank" rel="noopener noreferrer" className="text-base text-slate-300 hover:text-slate-500 transition-colors">
               LinkedIn
             </a>
           </div>
