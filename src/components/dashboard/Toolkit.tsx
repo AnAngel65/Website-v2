@@ -68,14 +68,7 @@ export function Toolkit() {
             <motion.div
               key={index}
               className="text-center"
-              variants={{
-  hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { duration: 0.5, ease: "easeOut" } 
-  }
-} as any}
+              variants={itemVariants}
             >
               <p className="text-lg font-semibold text-blue-200">{prof}</p>
             </motion.div>
