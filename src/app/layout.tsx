@@ -28,7 +28,7 @@ export default function RootLayout({
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
       }}>
-        <div className="absolute inset-0 bg-black/60 z-0" />
+        <div className="absolute inset-0 bg-white/60 z-0" />
         <div className="relative z-10 flex-1">
           {children}
         </div>
