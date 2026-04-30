@@ -59,7 +59,7 @@ const SiteEvolution = () => {
         className="fixed bottom-8 right-8 bg-blue-200 text-white p-2 rounded-full shadow-lg hover:bg-blue-400 transition-colors duration-300 z-50"
         aria-label="Open site evolution timeline"
       >
-        <Image src="/assets/pngtree-a-closer-look-at-the-hourglass-png-image_11517571.png" alt="Site Evolution" width={40} height={40} />
+        <Image src="/assets/pngtree-a-closer-look-at-the-hourglass-png-image_11517571.png" alt="Site Evolution" width={40} height={40} loading="eager" />
       </button>
 
       {/* Modal */}
@@ -99,7 +99,7 @@ const SiteEvolution = () => {
                         {/* Image Placeholder */}
                         <div className="w-full h-32 bg-gray-500/20 rounded-md mb-4 flex items-center justify-center flex-shrink-0 relative">
                           {item.imageUrl ? (
-                            <Image src={item.imageUrl} alt={item.title} layout="fill" objectFit="cover" className="rounded-md" />
+                            <Image src={item.imageUrl} alt={item.title} fill sizes="20vw" className="rounded-md object-cover" />
                           ) : (
                             <span className="text-gray-400 text-sm">Image</span>
                           )}
