@@ -11,30 +11,40 @@ const timelineData = [
     description: "Manual design & visual layout.",
     active: false,
     comingSoon: false,
+    imageUrl: "/assets/v1.png",
+    linkUrl: "/assets/documents/2026 CV.pdf",
   },
   {
     title: "The Foundation",
     description: "Transitioning from design to code.",
     active: false,
     comingSoon: false,
+    imageUrl: "/assets/v2.png",
+    linkUrl: "https://an-qi-website.vercel.app/",
   },
   {
     title: "The Exploration",
     description: "Integrating AI for better UI design.",
     active: true,
     comingSoon: false,
+    imageUrl: "",
+    linkUrl: "",
   },
   {
     title: "The Evolution",
-    description: "Advanced high-fidelity UI refinement.",
+    description: "Current latest website.",
     active: false,
     comingSoon: true,
+    imageUrl: "",
+    linkUrl: "",
   },
   {
     title: "The Destination",
-    description: "",
+    description: "Standardizing workflows & magic.",
     active: false,
     comingSoon: true,
+    imageUrl: "",
+    linkUrl: "",
   },
 ];
 
@@ -80,10 +90,19 @@ const SiteEvolution = () => {
                       <div className={`w-4 h-4 rounded-full ${item.active ? 'bg-green-400 ring-4 ring-green-400/50' : 'bg-gray-400'}`}></div>
                       
                       {/* Timeline Item Card */}
-                      <div className={`mt-4 p-4 rounded-lg border border-gray-200/30 bg-white/10 text-center flex flex-col h-full w-full ${item.comingSoon ? '' : 'cursor-pointer hover:bg-white/20'}`}>
+                      <a 
+                        href={item.linkUrl} 
+                        target={item.linkUrl.startsWith('http') ? '_blank' : '_self'} 
+                        rel={item.linkUrl.startsWith('http') ? 'noopener noreferrer' : ''}
+                        className={`mt-4 p-4 rounded-lg border border-gray-200/30 bg-white/10 text-center flex flex-col h-full w-full ${item.comingSoon || !item.linkUrl ? 'pointer-events-none' : 'cursor-pointer hover:bg-white/20'}`}
+                      >
                         {/* Image Placeholder */}
-                        <div className="w-full h-32 bg-gray-500/20 rounded-md mb-4 flex items-center justify-center flex-shrink-0">
-                          <span className="text-gray-400 text-sm">Image</span>
+                        <div className="w-full h-32 bg-gray-500/20 rounded-md mb-4 flex items-center justify-center flex-shrink-0 relative">
+                          {item.imageUrl ? (
+                            <Image src={item.imageUrl} alt={item.title} layout="fill" objectFit="cover" className="rounded-md" />
+                          ) : (
+                            <span className="text-gray-400 text-sm">Image</span>
+                          )}
                         </div>
                         <div className="flex flex-col flex-grow justify-between">
                           <div>
@@ -99,7 +118,7 @@ const SiteEvolution = () => {
                             )}
                           </div>
                         </div>
-                      </div>
+                      </a>
                     </div>
                   ))}
                 </div>
