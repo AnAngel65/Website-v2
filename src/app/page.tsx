@@ -4,6 +4,7 @@ import { ProfessionalBackground } from "@/components/dashboard/ProfessionalBackg
 import { Testimonials } from "@/components/dashboard/Testimonials";
 import { Toolkit } from "@/components/dashboard/Toolkit";
 import { Footer } from "@/components/dashboard/Footer";
+import SiteEvolution from "@/components/SiteEvolution";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Testimonials />
       <Toolkit />
       <Footer />
+      <SiteEvolution />
     </div>
   );
 }
